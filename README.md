@@ -1,2 +1,2 @@
 # Freecodecamp
-Free code camp Exercises solution 
+Freecodecamp Exercises solution 
