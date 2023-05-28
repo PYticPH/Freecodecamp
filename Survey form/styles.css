@@ -63,7 +63,7 @@ input[type="radio"], input[type="checkbox"]{
   min-height: 20px;
   margin-left: 0;
   margin-right: 8px;
-  vertical-align: -3.5;
+  vertical-align: -3.5px;
 }
 
 #comment, #submit {
