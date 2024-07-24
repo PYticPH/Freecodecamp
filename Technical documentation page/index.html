@@ -2,12 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
-    <title>JavaScript Technical Docmentation Page</title>
+    <meta name="viewport", content="width=device-width, initial-scale=1.0"/>
+    <title>JavaScript Technical Documentation Page</title>
   </head>
   <body>
     <div>
-      <nav></nav>
+      <nav id="navbar">
+        <div>
+          <header>
+            <h1>JS Doc</h1>
+          </header>
+        </div>
+        <div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
       <main id="main-doc">
+        <!-- Introduction -->
         <section class="main-section" id="Introduction">
           <header>
             <h1>Introduction</h1>
@@ -19,10 +42,10 @@
             right in a web page's HTML and run automatically as the page loads.<br>
             Scripts are provided and executed as plain text. They don't need special
             preparation or compilation to run.<br>
-            In this aspect, JavaScript is very different fron another language called
+            In this aspect, JavaScript is very different from another language called
             Java.
             <blockquote>
-              <h2>Why is it called JavaScript?</h2>
+              <h3>Why is it called JavaScript?</h3>
               <p>
                 When JavaScript was created, it initially had another name: "LiveScript".
                 But Java was very popular at that time, so it was decided that positioning
@@ -36,6 +59,745 @@
             or actually on any device that has a special program called the JavaScript engine.
           </p>
           <h2>What makes JavaScript unique?</h2>
+          <p>
+            There are at least three great things about JavaScript:<br>
+            <blockquote>
+              <ul>
+                <li>Simple integration with HTML/CSS</li>
+                <li>Simple things are done simply.</li>
+                <li>Supported by all major browsers and enabled by default.</li>
+              </ul>
+            </blockquote>
+            JavaScript is the only browser technology that combines these three things.<br>
+            That's what makes JavaScript unique. That's why it's the most widespread tool
+            for creating browser interfaces.<br>
+            That said, JavaScript can be used to create servers, mobile applications, etc.
+          </p>
+        </section>
+        <!-- Hello world -->
+        <section class="main-section" id="Hello_world!">
+          <header>
+            <h1>Hello world!</h1>
+          </header>
+          <h2>The "script" tag</h2>
+          <p>
+            JavaScript programs can be inserted almost anywhere into an HTML document using
+            the &lt;script&gt; tag.<br>
+            For instance:
+            <pre>
+              <code>
+                
+                &lt;!Doctype HTML&gt;
+               
+                &lt;html&gt;
+                  
+                  &lt;body&gt;
+                    
+                    &lt;p&gt;Before the script ...&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                      alert( 'Hello, world!' );
+                    &lt;/script&gt;
+
+                    &lt;p&gt;... After the script.&lt;/p&gt;
+                  
+                  &lt;/body&gt;
+                
+                &lt;/html&gt;
+              
+              </code>
+            </pre>
+            The &lt;script&gt; tag contains JavaScript code which is automatically executed when 
+            the browser processes the tag.
+          </p>
+        </section>
+        <!-- Code structure -->
+        <section class="main-section" id="Code_structure">
+          <header>
+            <h1>Code structure</h1>
+          </header>
+          <h2>Statements</h2>
+          <p>
+            Statements are syntax constructs and commands that perform actions.<br>
+            We can have as many statements in our code as we want. Statements can be separated with
+            a semicolon.<br>
+            For example, here we split "Hello World" into two alerts:
+            <pre>
+              <code>
+                alert('Hello'); alert('World');
+              </code>
+            </pre>
+            Usually, statements are written on separate lines to make the code more readable:
+            <pre>
+              <code>
+                alert('Hello');
+                alert('World');
+              </code>
+            </pre>
+          </p>
+          <h2>Semicolons</h2>
+          <p>
+            A semicolon may be omitted in most cases when a line break exists.<br>
+            This would also work:
+            <pre>
+              <code>
+                alert('Hello')
+                alert('World')
+              </code>
+            </pre>
+            Here, JavaScript interprets the line break as an "implicit" semicolon. This is called
+            an <i>automatic semicolon insertion</i>.<br>
+            <strong>
+              In most cases, a newline implies a semicolon. But "in most cases" does not mean 
+              "always"!
+            </strong>
+          </p>
+          <h2>Comments</h2>
+          <p>
+            As time goes on, programs becomes more and more complex. It becomes necessary to add 
+            comments which describe what the code does and why.<br>
+            Comments can be put into any place of a script. They don't affect its execution because
+            the engine simply ignores them.<br>
+            <strong>One-line comments starts with two forward slash characters //</strong>.<br>
+            The rest of the line is a comment. It may occupy a full line of its own or follow a 
+            statement.<br>
+            like here:
+            <pre>
+              <code>
+                // This comment occupies a line of its own
+                alert('Hello');
+                
+                alert('World'); // This comment follows the statement
+              </code>
+            </pre>
+            <strong>
+              Multiline comments start with a forward slash and an asterisk /* and end with an asterisk 
+              and a forward slash */.
+            </strong><br>
+            The content of comments is ignored, so if we put code inside /* .. */, it won't execute.<br>
+            Sometimes it can be handy to temporarily disable a part of code:
+            <pre>
+              <code>
+                /* An example with two messages.
+                  This is a multiline comment.
+                */
+
+                alert('Hello');
+                alert('World');
+
+                /* Commenting out the code
+                alert('Hello');
+                */
+                alert('World');
+              </code>
+            </pre>
+          </p>
+        </section>
+        <!-- variables -->
+        <section class="main-section" id="Variables">
+          <header>
+            <h1>Variables</h1>
+          </header>
+          <h2>A Variables</h2>
+          <p>
+            A variable is a "named storage" for data. We can use variables to store goodies, visitors,
+            and other data.<br>
+            To create a variable in JavaScript, use the <strong>let</strong> keyword.<br>
+            The statement below creates (in other word: declares) a variable with the name "message":
+            <pre>
+              <code>
+                let message;
+              </code>
+            </pre>
+            Now, we can put some data into it by using the assignment operator = :
+            <pre>
+              <code>
+                let message;
+                
+                message = 'Hello'; // store the string 'Hello' in the variable named message
+              </code>
+            </pre>
+            The string is now saved into the memory area associated with the variable. We can access it using
+            the variable name:
+            <pre>
+              <code>
+                let message;
+                message = 'Hello!';
+
+                alert(message); // shows the variable content
+              </code>
+            </pre>
+            To be concise, we can combine the variable declaration and assignment into a single line:
+            <pre>
+              <code>
+                let message = 'Hello!'; // define the variable and assign the value
+                alert(message); // Hello!
+              </code>
+            </pre>
+          </p>
+          <h2>Variable naming</h2>
+          <p>
+            There are two limitation on variable name in JavaScript:<br>
+            <ol>
+              <li>The name must contain only letters, digits, or the $ and _ .</li>
+              <li>The first character must not be a digit.</li>
+            </ol>
+            Examples of valid names:
+            <pre>
+              <code>
+                let userName;
+                let test123;
+              </code>
+            </pre>
+            When the name contains multiple words, camelCase is commonly used. That is:
+            words go one after another, each word except first starting with a capital letter:
+            <strong>myVeryLongName</strong>.
+            <blockquote>
+              <h3>Case matters</h3>
+              <p>
+                Variable named <strong>apple</strong> and <strong>Apple</strong> are two different variables.
+              </p>
+            </blockquote>
+          </p>
+          <h2>Constants</h2>
+          <p>
+            To declare a constant (unchanging) variable, use <strong>const</strong> instead of <strong>let</strong>:
+            <pre>
+              <code>
+                const myBirthday = '18.04.1982';
+              </code>
+            </pre>
+            Variables declared using <strong>const</strong> are called "constants". They cannot be reassigned. 
+            An attempt to do so would cause an error:
+            <pre>
+              <code>
+                const myBirthday = '18.04.1982';
+
+                myBirthday = '01.01.2001'; // error, can't reassign the constant!
+              </code>
+            </pre>
+            When a programmer is sure that a variable will never change, they can declare it with <strong>const</strong>
+            to guarantee and communicate that fact to everyone.
+          </p>
+        </section>
+        <!-- Data types -->
+        <section class="main-section" id="Data_types">
+          <header>
+            <h1>Data types</h1>
+          </header>
+          <p>
+            A value in JavaScript is always of a certain type. For example, a string or a number.<br>
+            We can put any type in a variable. For example, a variable can at one moment be a string and then store a
+            number.
+            <pre>
+              <code>
+                // no error
+                let message = "hello";
+                message = 123456;
+              </code>
+            </pre>
+            Programming languages that allow such things, such as JavaScript, are called "dynamically typed", meaning
+            that there exist data types, but variables are not bound to any of them. 
+          </p>
+          <h2>Number</h2>
+          <p>
+            <pre>
+              <code>
+                let n = 123;
+                n = 12.345;
+              </code>
+            </pre>
+            The number type represents both integer and floating point numbers.<br>
+            There are many operations for numbers, e.g. multiplication *, division /, addition +, subtraction -, and so
+            on.<br>
+          </p>
+          <h2>String</h2>
+          <p>
+            A string in JavaScript must be surrounded by quotes.<br>
+            <pre>
+              <code>
+                let str = "Hello";
+                let str2 = 'Single quotes are ok too';
+                let phrase = `can embed another ${str}`;
+              </code>
+            </pre>
+          </p>
+          <h2>Boolean (logical type)</h2>
+          <p>
+            The boolean type has two values: true or false.<br>
+            This type is commonly used to store yes/no values: true means "yes, correct", and false means
+            "no, incorrect".<br>
+            For instance:
+            <pre>
+              <code>
+                let nameFieldChecked = true; // yes, name field is checked
+                let ageFieldChecked = false; // no, age field is not checked
+              </code>
+            </pre>
+            Boolean values also come as a result of comparisons:
+            <pre>
+              <code>
+                let isGreater = 4 > 1;
+                alert(isGreater); // true (the comparison result is "yes")
+              </code>
+            </pre>
+          </p>
+          <h2>The "null" value</h2>
+          <p>
+            The special null value does not belong to any of the types describes above.<br>
+            It forms a separate type of its own which contains only the null value:
+            <pre>
+              <code>
+                let age = null;
+              </code>
+            </pre>
+            In JavaScript, null is not a "reference to a non-existing object" or a "null pointer" like in some
+            other languages.<br>
+            It's just a special value which represents "nothing", "empty" or "value unknown".<br>
+            The code above states that age is unknown.
+          </p>
+          <h2>The "undefined" value</h2>
+          <p>
+            The special value undefined also stands apart. It makes a type of its own, just line null.<br>
+            The meaning of undefined is "value is not assigned".<br>
+            If a variable is declared, but not assigned, then its value is undefined:
+            <pre>
+              <code>
+                let age;
+                alert(age); // show "undefined"
+              </code>
+            </pre>
+            Technically, it is possible to explicitly assign undefined to a variable;
+            <pre>
+              <code>
+                let age =  100;
+                
+                // change the value to undefined
+                age = undefined;
+                
+                alert(age); // "undefined"
+              </code>
+            </pre>
+            ...But we don't recommend doing that. Normally, one uses null to assign an "empty" or "unknown" value
+            to a variable , while undefined is reserved as a default initial value for unassigned things.
+          </p>
+        </section>
+        <!-- Conditional branching -->
+        <section class="main-section" id="conditional_branching">
+          <header>
+            <h1>Conditional branching</h1>
+          </header>
+          <p>
+            Sometimes, we need to perform different actions based on different conditions.<br>
+            To do that, we can use the if statement and the conditional operator ?, that's also called a "question 
+            mark" operator.
+          </p>
+          <h1>The "if" statement</h1>
+          <p>
+            The if (...) statement evaluates a condition in parenthesis and, if the result is true, executes a block
+            of code.<br>
+            For example:
+            <pre>
+              <code>
+                let year = prompt('In which year was ECMAScript-2015 specification published?', '');
+                
+                if (year == 2015) alert( 'you are right!');
+              </code>
+            </pre>
+            In the example above, the condition is a simple equality check (year == 2015), but it can be much complex.<br>
+            If we want to execute more than one statement, we have to wrap our code block inside curly braces:
+            <pre>
+              <code>
+                if (year == 2015) {
+                 alert( "That's correct!");
+                  alert( "You're so smart!");
+                }
+              </code>
+            </pre>
+            We recommend wrapping your code block with curly braces {} every time you use an if statement, even if there is
+            only one statement to execute. Doing so improves readability.
+          </p>
+          <h2>Boolean conversion</h2>
+          <p>
+            The if {...} statement evaluates the expression in its parenthesis and converts the result to a boolean.<br>
+            conversion rules:
+            <ul>
+              <li>A number 0, an empty string "", null, undefined, and NaN all becomes false. Because of that they are called
+                "falsy" values.</li>
+              <li>Other values becomes true, so they are called "truthy".</li>
+            </ul>
+            So, the code under this condition would never execute:
+            <pre>
+              <code>
+                if (0) { // 0 is falsy
+                  ...
+                }
+              </code>
+            </pre>
+            ...and inside this condition - it always will:
+            <pre>
+              <code>
+                if (1) { // 1 is truthy 
+                  ...
+                }
+              </code>
+            </pre>
+            We can also pass a pre-evaluated boolean value to if, like this:
+            <pre>
+              <code>
+                let cond = (year == 2015); //equality evaluates to true or false
+
+                if (cond) {
+                  ...
+                }
+              </code>
+            </pre>
+          </p>
+          <h2>The "else" clause</h2>
+          <p>
+            The if statement may contain an optional else block. It executes when the condition is falsy.<br>
+            For example:
+            <pre>
+              <code>
+                let year = prompt('In which year was the ECMAScript-2015 specification published?', '');
+
+                if (year == 2015) {
+                  alert( 'You guessed it right!' );
+                } else {
+                  alert( 'How can you be so wrong?' ); // any value except 2015
+                }
+              </code>
+            </pre>
+          </p>
+          <h2>Several conditions: "else if"</h2>
+          <p>
+            Sometimes, we'd like to test several variants of a condition. The else if clause lets us do that.<br>
+            For example:
+            <pre>
+              <code>
+                let year = prompt('In which was the ECMAScript-2015 specification published?', '');
+
+                if (year < 2015) {
+                  alert( 'Too early...' );
+                } else if (year > 2015) {
+                  alert( 'Too late' );
+                } else {
+                  alert ( 'Exactly' );
+                }
+              </code>
+            </pre>
+            In the code above, JavaScript first checks year < 2015. If that is falsy, it goes to the next condition
+            year > 2015. If that is also falsy, it shows the last alert.<br>
+            There can be more else if blocks. The final else is optional.
+          </p>
+          <h2>Conditional operator '?'</h2>
+          <p>
+            Sometimes, we need to assign a variable depending on a condition.<br>
+            For instance:
+            <pre>
+              <code>
+                let accessAllowed;
+                let age =  prompt('How old are you?', '');
+
+                if (age > 18) {
+                  allowedAccess = true;
+                } else {
+                  accessAllowed = false;
+                }
+
+                alert(accessAllowed);
+              </code>
+            </pre>
+            The so-called "conditional" or "question mark" operator lets us do that in a shorter and simpler way.<br>
+            The operator is represented by a question mark ?. Sometimes it's called "ternary", because the operator
+            has three operands. It is actually the one and only operator in JavaScript which has that many.<br>
+            The syntax is:
+            <pre>
+              <code>
+                let result = condition ? value1 : value2;
+              </code>
+            </pre>
+            The condition is evaluated: if it's truthy then value1 is returned, otherwise value2.<br>
+            For example:
+            <pre>
+              <code>
+                let accessAllowed = (age > 18) ? true : false;
+              </code>
+            </pre>
+            Technically, we can omit the parenthesis round age > 18. The question mark operator has a low precedence,
+            so it executes after the comparison >.
+          </p>
+        </section>
+        <!-- Loops -->
+        <section class="main-section" id="Loops">
+          <header>
+            <h1>Loops</h1>
+          </header>
+          <p>
+            We often need to repeat actions<br>
+            For example, outputting goods from a list one after another or just running the same code for each number from
+            1 to 10.<br>
+            Loops are a way to repeat the same code multiple times.
+          </p>
+          <h2>The "while" loop</h2>
+          <p>
+            The while loop has the following syntax:
+            <pre>
+              <code>
+                while (condition) {
+                  // code
+                  // so-called "loop body"
+                }
+              </code>
+            </pre>
+            While the condition is truthy, the code from the loop body is executed.
+            For instance, the loop below outputs i while i < 3:
+            <pre>
+              <code>
+                let i = 0;
+                while (i < 3) {// show 0, then 1, then 2
+                  alert(i);
+                  i++;
+                }
+              </code>
+            </pre>
+          </p>
+          <h2>The "do...while" loop</h2>
+          <p>
+            The condition check can be moved below the loop body using the do..while syntax:
+            <pre>
+              <code>
+                do {
+                  // loop body
+                } while (condition);
+              </code>
+            </pre>
+            The loop will first execute the body, then check the condition, and, while it's
+            truthy, execute it again and again.<br>
+            For example:
+            <pre>
+              <code>
+                let i = 0;
+                do {
+                  alert( i );
+                  i++;
+                } while (i < 3);
+              </code>
+            </pre>
+            This form of syntax should only be used when you want the body of the loop to execute
+            <strong>at least once</strong> regardless of the condition being truthy. Usually. the
+            other form is preferred: while(...) {...}.
+          </p>
+          <h2>The "for" loop</h2>
+          The for loop is more complex, but it's also the most commonly used loop.<br>
+          It looks like this:
+          <pre>
+            <code>
+              for (begin; condition; step) {
+                // ... loop body ...
+              }
+            </code>
+          </pre>
+          Let's learn the meaning of these parts by example. The loop below runs alert(i) for i from
+          0 up to (but not including) 3:
+          <pre>
+            <code>
+              for (let i = 0; i < 3; i++) { // show 0, then 1, then 2
+                alert(i);
+              }
+            </code>
+          </pre>
+        </section>
+        <!-- Functions -->
+        <section class="main-section" id="Functions">
+          <header>
+            <h1>Functions</h1>
+          </header>
+          <p>
+            Quite often we need to perform a similar action in many places of the script.<br>
+            For example, we need to show a nice-looking message when a visitor logs in, logs out and
+            maybe somewhere else.<br>
+            Functions are the main "building blocks" of the program. They allow the code to be called
+            many times without repetition.<br>
+          </p>
+          <h2>Function Declaration</h2>
+          <p>
+            To create a function we can use a function declaration.<br>
+            It looks like this:
+            <pre>
+              <code>
+                function showMessage() {
+                  alert( 'Hello everyone!' );
+                }
+              </code>
+            </pre>
+            The function keyword goes first, then goes the name of the function, then a list of parameters
+            between the parenthesis (comma-separated, empty in the example above, we'll see examples later)
+            and finally the code of the function, also named "the function body", between curly braces.
+            <pre>
+              <code>
+                function name(parameter1, parameter2, .... parameterN) {
+                  // body
+                }
+              </code>
+            </pre>
+            Our new function can be called by its name: showMessage().
+            For instance:
+            <pre>
+              <code>
+                function showMessage() {
+                  alert( 'Hello everyone!' );
+                }
+                showMessage();
+                showMessage();
+              </code>
+            </pre>
+            The call showMessage() executes the code of the function. Here we will see the message two times.<br>
+            This example clearly demonstrates one of the main purposes of functions: to avoid code duplication.<br>
+            If we ever need to change the message or the way it is shown, it's enough to modify the code in one
+            place: the function which outputs it.            
+          </p>
+          <h2>Local variables</h2>
+          <p>
+            A variable declared inside a function is only visible inside that function.<br>
+            For example:
+            <pre>
+              <code>
+                function showMessage() {
+                  let message = "Hello, I'm Javascript"; //local variable
+
+                  alert( message );
+                }
+
+                showMessage(); // Hello, I'm Javascript!
+
+                alert( message ); // <-- Error! The variable is local to the function
+              </code>
+            </pre>
+          </p>
+          <h2>Outer variables</h2>
+          <p>
+            A function can access an outer variable as well, for example:
+            <pre>
+              <code>
+                let userName = 'john';
+
+                function showMessage() {
+                  let message = 'Hello, ' + userName;
+                  alert(message);
+                }
+
+                showMessage(); // Hello, john
+              </code>
+            </pre>
+            <blockquote>
+              <h3>Global Variables</h3>
+              <p>
+                Variables declared outside of any function, such as the outer userName in the code above,
+                are called global.<br>
+                Global variables are visible from any function (unless shadowed by locals).<br>
+                It's good practice to minimize the use of global variables. Modern code has few or no
+                globals. Most variables reside in their functions. sometimes though, they can be useful to
+                store project-level data.
+              </p>
+            </blockquote>
+          </p>
+          <h2>Parameter</h2>
+          <p>
+            we can pass arbitrary data to functions using parameters.<br>
+            In the example below, the function has two parameters: from and text.
+            <pre>
+              <code>
+                function showMessage(from, text) { // parameter: from, text
+                  alert(from + ': ' + text);
+                }
+                showMessage('Ann', 'Hello!'); // Ann: Hello (*)
+                showMessage('Ann', "What's up?"); // Ann: what's up? (**)
+              </code>
+            </pre>
+            When the function is called in lines (*) and (**), the given values are copied to local Variables
+            from and text. Then the function uses them.
+          </p>
+          <h2>Default values</h2>
+          <p>
+            If a function is called, but an argument is not provided, then the corresponding value becomes
+            undefined.<br>
+            For instance, the aforementioned function showMessage(from, text) can be called with a single
+            argument:
+            <pre>
+              <code>
+                showMessage("Ann");
+              </code>
+            </pre>
+            That's not an error. Such a call would output "*Ann": undefined. As the value for text isn't
+            passed, it becomes undefined.<br>
+            We can specify the so-called "default" (to use if omitted) value for a parameter in the function
+            declaration, using =:
+            <pre>
+              <code>
+                function showMessage(from, text = "no text given") {
+                  alert( from + ": " + text );
+                }
+
+                showMessage("Ann"); // Ann: no text given
+              </code>
+            </pre>
+          </p>
+          <h2>Returning a value</h2>
+          <p>
+            A function can return a value back into the calling code as the result.<br>
+            The simplest example would be a function that sum two values:
+            <pre>
+              <code>
+                function sum(a, b) {
+                  return a + b;
+                }
+
+                let result = sum(1, 2);
+                alert( result ); // 3
+              </code>
+            </pre>
+            The directive return can be in any place of the function. When the execution reaches it,
+            the function stops, and the value is returned to the calling code (assigned to result above).  
+          </p>
+          <h2>Naming a function</h2>
+          <p>
+            Functions are actions. so their name is usually a verb. It should be brief, as accurate as
+            possible and describe what the function does, so that someone reading the code gets an
+            indication of what the function does.<br>
+            It is a widespread practice to start a function with a verbal prefix which vaguely describe the
+            action. There must be an agreement within the team on the meaning of the prefixes.<br>
+            For instance, functions that start with "show" usually show something.<br>
+            Function starting with...
+            <ul>
+              <li>"get..." - return a value,</li>
+              <li>"calc..." - calculate something</li>
+              <li>"create..." - create something</li>
+              <li>"check..." - check something and return a boolean, etc</li>
+            </ul>
+            Examples of such names:
+            <pre>
+              <code>
+                showMessage(..)     // shows a message
+                getAge(..)          // returns the age (gets it somehow)
+                calcSum(..)         // calculates a sum and returns the result
+                createForm(..)      // creates a form (and usually returns it)
+                checkPermission(..) // checks a permission, returns true/false
+              </code>
+            </pre>
+            With prefixes in place, a glance at a function name gives an understanding what kind of work
+            it does and what kind of value it returns.
+          </p>
+        </section>
+        <!-- Reference -->
+        <section class="main-section" id="Reference">
+          <header>
+            <h1>Reference</h1>
+          </header>
+          <ul>
+            <li> All the documentation in this page is taken from <a href="https://javascript.info">
+              Javascript.info</li>
+          </ul>
         </section>
       </main>
     </div>
