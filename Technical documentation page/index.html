@@ -10,87 +10,40 @@
   <body>
     <!-- Navigation -->
     <nav id="navbar">
-      <div>
-        <header>
-          <h1>JS Doc</h1>
-        </header>
-      </div>
-      <div>
-        <div>
-          <a class="nav-link" href="./index.html#Introduction">Introduction</a>
-        </div>
-        <div>What is JavaScript?</div>
-        <div>What makes javascript unique?</div>
-      </div>
-      <div>
-        <div>
-          <a class="nav-link" href="./index.html#Hello_world">Hello world</a>
-        </div>
-        <div>The "script" tag</div>
-      </div>
-      <div>
-        <div>
-          <a class="nav-link" href="./index.html#Code_structure">
+      <header>
+        <h1>JS Doc</h1>
+      </header>
+      <ul class="nav-list">
+        <li>
+          <a class="nav-link" href="#Introduction">Introduction</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Hello_world">Hello world</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Code_structure">
             Code structure</a>
-        </div>
-        <div>Statements</div>
-        <div>Semicolons</div>
-        <div>Comments</div>
-      </div>
-      <div>
-        <div>
-          <a class="nav-link" href="./index.html#Variables">Variables</a>
-        </div>
-        <div>A variable</div>
-        <div>Variable naming</div>
-        <div>Constants</div>
-      </div>
-      <div>
-        <div>
-          <a class="nav-link" href="./index.html#Data_types">Data types</a>
-        </div>
-        <div>Number</div>
-        <div>String</div>
-        <div>Boolean</div>
-        <div>The "null" value</div>
-        <div>The "undefined" value</div>
-      </div>
-      <div>
-        <div>
-          <a class="nav-link" href="./index.html#Conditional_branching">
+        </li>
+        <li>
+          <a class="nav-link" href="#Variables">Variables</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Data_types">Data types</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Conditional_branching">
             Conditional branching</a>
-        </div>
-        <div>The "if" statement</div>
-        <div>Boolean conversion</div>
-        <div>The "else" clause</div>
-        <div>Several conditions: "else if"</div>
-        <div>Conditional operator "?"</div>
-      </div>
-      <div>
-        <div>
-          <a class="nav-link" href="./index.html#Loops">Loops</a>
-        </div>
-        <div>The "while" loop</div>
-        <div>The "do...while" loop</div>
-        <div>The "for" loop</div>
-      </div>
-      <div>
-        <div>
-          <a class="nav-link" href="./index.html#Functions">Functions</a>
-        </div>
-        <div>Functions Declaration</div>
-        <div>Local variables</div>
-        <div>Outer variables</div>
-        <div>Parameter</div>
-        <div>Default values</div>
-        <div>Returning a value</div>
-        <div>Naming a function</div>
-      </div>
-      <div>
-        <div>
-          <a class="nav-link" href="./index.html#Reference">Reference</a>
-        </div>
-      </div>
+        </li>
+        <li>
+          <a class="nav-link" href="#Loops">Loops</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Functions">Functions</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Reference">Reference</a>
+        </li>
+      </ul>
     </nav>
     <!-- Main section -->
     <main id="main-doc">
@@ -99,6 +52,10 @@
         <header>
           <h1>Introduction</h1>
         </header>
+        <p>
+          Let's see what's so special about JavaScript, what can we achieve
+          with it, and what other technologies play well with it.
+        </p>
         <h2>What is JavaScript?</h2>
         <p>
           JavaScript was initially created to "make web pages alive."<br>
@@ -129,11 +86,11 @@
         <h2>What makes JavaScript unique?</h2>
         <p>There are at least three great things about JavaScript:</p>
         <blockquote>
-          <ul>
-            <li>Simple integration with HTML/CSS</li>
-            <li>Simple things are done simply.</li>
-            <li>Supported by all major browsers and enabled by default.</li>
-          </ul>
+          <p>
+            Simple integration with HTML/CSS.<br>
+            Simple things are done simply.<br>
+            Supported by all major browsers and enabled by default.
+          </p>
         </blockquote>
         <p>
           JavaScript is the only browser technology that combines these three
@@ -149,6 +106,13 @@
         <header>
           <h1>Hello world</h1>
         </header>
+        <p>
+          This part of the tutorial is about core Javascript, the language
+          itself.<br>
+          Fisrt, let's see how we attach  script to a webpage. For sever-side
+          environments (like Node.js), you can execute the script with a
+          command like "node my.js"
+        </p>
         <h2>The "script" tag</h2>
         <p>
           JavaScript programs can be inserted almost anywhere into an HTML
@@ -158,23 +122,14 @@
         <pre>
           <code>
             &lt;!DOCTYPE HTML&gt;
-
             &lt;html&gt;
-
-            &lt;body&gt;
-
-            &lt;p&gt;Before the script ...&lt;/p&gt;
-
-            &lt;script&gt;
-
-            alert( 'Hello, world!' );
-
-            &lt;/script&gt;
-
-            &lt;p&gt;... After the script.&lt;/p&gt;
-
-            &lt;/body&gt;
-
+              &lt;body&gt;
+                &lt;p&gt;Before the script ...&lt;/p&gt;
+                &lt;script&gt;
+                  alert( 'Hello, world!' );
+                &lt;/script&gt;
+                &lt;p&gt;... After the script.&lt;/p&gt;
+              &lt;/body&gt;
             &lt;/html&gt;
           </code>
         </pre>
@@ -188,6 +143,9 @@
         <header>
           <h1>Code structure</h1>
         </header>
+        <p>
+          The first thing we'll study is the building block of code.
+        </p>
         <h2>Statements</h2>
         <p>
           Statements are syntax constructs and commands that perform actions.
@@ -283,6 +241,22 @@
         <header>
           <h1>Variables</h1>
         </header>
+        <p>
+          Most of the time, a JavaScript application needs to work with
+          information. Here are two examples:
+        </p>
+        <ol>
+          <li>An online shop - the information might include goods being sold
+              and a shopping cart.
+          </li>
+          <li>
+            A chat appliation - the information might include users, messages
+            , and much more.
+          </li>
+        </ol>
+        <p>
+          Variables are used to store this information.
+        </p>
         <h2>A variable</h2>
         <p>
           A variable is a "named storage" for data. We can use variables to
@@ -512,7 +486,7 @@
           To do that, we can use the if statement and the conditional operator
           ?, that's also called a "question mark" operator.
         </p>
-        <h1>The "if" statement</h1>
+        <h2>The "if" statement</h2>
         <p>
           The if (...) statement evaluates a condition in parenthesis and, if
           the result is true, executes a block of code.<br>
