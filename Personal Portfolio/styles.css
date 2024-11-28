@@ -1,0 +1,479 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a:link, a:active, a:visited {
+    text-decoration: none;
+    color: unset;
+}
+
+body {
+    min-width: 320px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+/* Welcome & navbar */
+
+#welcome-section {
+    width: 100%;
+    height: 100vh;
+    background: rgb(124, 119, 119);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 0 1em;
+}
+
+#navbar {
+    background:rgb(82, 79, 79);
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: right;
+    padding-right: 1em;
+    border-bottom: 4px solid rgb(179, 115, 115);
+}
+
+.nav-link {
+    padding: 1em;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    background-color:rgb(124, 119, 119);
+}
+
+
+h1 {
+    font-size: 8rem;
+    margin-left: -3em;
+    text-shadow: 10px 10px rgb(90, 87, 87);
+    animation: h1-fade 1.5s ease-in-out;
+}
+
+#welcome-section p:nth-of-type(1) {
+    font-size: 4rem;
+    margin-left: 0;
+    text-shadow: 4px 4px rgb(90, 87, 87);
+    animation: greeting1 2.5s ease-in-out;
+}
+
+#welcome-section p:nth-of-type(2) {
+    font-size: 2.5rem;
+    margin-left: 2em;
+    text-shadow: 4px 4px rgb(179, 115, 115);
+    animation: greeting2 2.8s ease-in-out;
+}
+
+/* Project section */
+
+#projects {
+    width: 100%;
+    background: rgb(156, 154, 154);
+    text-align: center;
+    padding: 6em 1em;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 4em;
+    text-shadow: 2px 2px rgb(90, 87, 87);
+}
+
+.projects-container {
+    width: 100%;
+    max-width: 1080px;
+    background-color: inherit;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    margin: 0 auto;
+    gap: 4em;
+}
+
+
+.project-image {
+    width: 100%;
+    height: calc(100% - 2.5em);
+    display: block;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.project-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 0.8em 1em;
+    background-color: #817373;
+    border-radius: 0 0 5px 5px;
+}
+
+/* Contact */
+
+#contact {
+    width: 100%;
+    height: 100vh;
+    background: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5em 1em;
+}
+
+h3 {
+    font-size: 4rem;
+    text-shadow: 2px 2px rgb(90, 87, 87);
+}
+
+.social {
+    display: flex;
+    column-gap: 2em;
+    margin-top: 2em;
+}
+
+.social-link {
+    font-size: 2rem;
+    padding: 0.2em;
+    text-shadow: 2px 2px rgb(90, 87, 87);
+    transition: transform 0.5s;
+}
+
+.social-link:hover {
+    transform:translateY(15px);
+}
+
+#footer {
+    width: 100%;
+    height: auto;
+    background: grey;
+    text-align: center;
+    padding: 2em 1em;
+}
+
+#footer > p:nth-of-type(1) {
+    margin-bottom: 1em;
+    font-size: 1rem;
+}
+
+#footer > p:nth-of-type(2) {
+    font-size: 0.8rem;
+}
+
+
+/* Animation */
+
+@keyframes h1-fade {
+
+
+    0% {
+        opacity: 0;
+        font-size: 0;
+    }
+
+    100% {
+        opacity: 1;
+        font-size: 8rem;
+    }
+}
+
+
+
+@keyframes greeting1 {
+
+
+    0% {
+        opacity: 0;
+        font-size: 0;
+    }
+
+    100% {
+        opacity: 1;
+        font-size: 4rem;
+    }
+}
+
+
+@keyframes greeting2 {
+
+
+    0% {
+        opacity: 0;
+        font-size: 0;
+    }
+
+    100% {
+        opacity: 1;
+        font-size: 2.5rem;
+    }
+}
+
+
+
+
+/* media screen */
+
+ 
+/* media screen 421 - 840px */
+
+
+@media screen and (min-width: 420px) and (max-width: 840px) {
+
+    :root {
+        --small-font: calc(14px + 1vw);
+    }
+
+    .nav-link {
+        padding: 1em;
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 5rem;
+        margin-left: unset;
+        margin-bottom: 10px;
+    }
+
+          
+    #welcome-section p:nth-of-type(1) {
+        font-size: 2.5rem;
+        margin-left: 0;
+        margin-bottom: 0.1em;
+    }
+    
+    #welcome-section p:nth-of-type(2) {
+        font-size: 1.3rem;
+        margin-left: 4em;
+    }
+
+
+
+    /* Project section */
+
+    h2 {
+        font-size: calc(15px + 1vw);
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 4em;
+    }
+
+    h3 {
+        font-size: calc(30px + 1vw);
+    }
+
+    .projects-container {
+        width: 100%;
+        max-width: 460px;
+        background-color: inherit;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        justify-content: center;
+        margin: 0 auto;
+        row-gap: 4em;
+    }
+
+    #contact {
+        width: 100%;
+        height: 80vh;
+        background: grey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2em 1em;
+    }
+
+
+    /* Animation */
+
+    @keyframes h1-fade {
+
+
+        0% {
+            opacity: 0;
+            font-size: 0;
+        }
+    
+    
+        100% {
+            opacity: 1;
+            font-size: 5rem;
+        }
+    }
+    
+    
+    @keyframes greeting1 {
+        
+        0% {
+            opacity: 0;
+            font-size: 0;
+        }
+        
+        100% {
+            opacity: 1;
+            font-size: 2.5rem;
+        }
+    }
+    
+    @keyframes greeting2 {
+        
+        0% {
+            opacity: 0;
+            font-size: 0;
+        }
+        
+        100% {
+            opacity: 1;
+            font-size: 1.3rem;
+        }
+    }
+    
+}
+
+
+/* max-width: 420px; */
+
+
+@media screen and (max-width: 420px) {
+
+    :root {
+        --small-font: calc(8px + 1vw);
+    }
+
+    #navbar {
+        background: rgb(82, 79, 79);
+        width: 100%;
+        position: fixed;
+        z-index: 10000;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: right;
+        flex-wrap: wrap;
+        padding: 0 0.2em;
+    }
+
+    .nav-link {
+        padding: 1em;
+        font-size: var(--small-font);
+    }
+
+
+    h1 {
+        font-size: calc(30px + 1vw);
+        margin-left: unset;
+        animation: unset;
+    }
+
+    #welcome-section p:nth-of-type(1) {
+        font-size: calc(16px + 1vw);
+        margin-top: 0.5em;
+        margin-left: unset;
+        animation: unset;
+    }
+
+    #welcome-section p:nth-of-type(2) {
+        font-size: calc(14px + 1vw);
+        margin-top: 0.5em;
+        animation: unset;
+    }
+
+    /* Project section */
+
+    #projects {
+        width: 100%;
+        background: rgb(209, 207, 207);
+        text-align: center;
+        padding: 4em 1em;
+    }
+
+    h2 {
+        font-size: calc(15px + 1vw);
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 4em;
+    }
+
+    .projects-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        gap: 2em;
+    }
+
+    .project-title {
+        font-size: var(--small-font);
+        font-weight: 600;
+        text-align: center;
+        padding: 0.8em 1em;
+    }
+
+    /* Contact */
+
+    #contact {
+        width: 100%;
+        height: auto;
+        background: grey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2em 1em;
+    }
+
+    h3 {
+        font-size: calc(20px + 1vw);
+    }
+
+
+    .social {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.5em;
+        padding: 0.2em;
+    }
+
+    .social-link {
+        font-size: 1rem;
+        margin-top: 1em;
+        padding: 0.2em;
+    }
+
+    #footer {
+        width: 100%;
+        height: auto;
+        background: grey;
+        text-align: center;
+        padding: 2em 0.2em;
+    }
+
+    #footer > p:nth-of-type(1) {
+        margin-bottom: 1em;
+        font-size: var(--small-font);
+    }
+    
+    #footer > p:nth-of-type(2) {
+        font-size: 0.5rem;
+    }
+}
