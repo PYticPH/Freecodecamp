@@ -49,6 +49,12 @@ h1 {
     font-size: var(--medium-font);
 }
 
+#result {
+    display: none;
+    width: 100%;
+    color: red;
+}
+
 label, button {
     display: block;
 }
