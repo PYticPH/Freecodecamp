@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    margin: 0 0;
+}
+
+body {
+    font-size: 20px;
+    text-align: center;
+}
+
+header {
+    margin: 2em 0;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+header  p {
+    font-size: 25px;
+    font-style: italic;
+    font-weight: bold;
+    color: #423d3d;
+}
+
+.app {
+    width: 70%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 1em;
+    font-size: 1.8rem;
+}
+
+.number {
+    width: 80%;
+    height: 50px;
+    font-size: 2rem;
+    text-align: center;
+    border: 0;
+    outline: 0;
+}
+
+button {
+    width: 30%;
+    display: block;
+    margin: 10px  auto 5px auto;
+    padding: 0.5em 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ir-container {
+    background-color: rgb(167, 189, 147);
+    padding: 2em;
+    margin: 1em;
+}
+
+.result {
+    background-color: #ffffff;
+    color: #2c2b2b;
+    border: 2px solid #ff0000;
+    padding: 16px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
