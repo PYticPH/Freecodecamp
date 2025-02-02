@@ -1,2 +1,2 @@
-# Freecodecamp
-Freecodecamp Exercises solutions
+# freeCodeCamp
+freeCodeCamp Certification Projects
