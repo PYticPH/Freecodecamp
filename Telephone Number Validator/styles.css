@@ -1,0 +1,77 @@
+:root {
+    --myFontSize: 1.2rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: #dadada;
+}
+
+h1 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(94, 88, 82, 0.822);
+    font-size: 3rem;
+    margin-top: 16px;
+}
+
+.bezel {
+    width: 100%;
+    height: 640px;
+    max-width: 350px;
+    background-color: rgba(29, 29, 29, 0.904);
+    border: 2px solid rgb(49, 48, 48);
+    margin: 0 auto;
+    padding: 50px 4px 80px 4px;
+    border-radius: 25px;
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    padding: 16px;
+}
+
+input {
+    display: block;
+    height: 40px;
+    width: 90%;
+    font-size: var(--myFontSize);
+    text-align: center;
+    margin: 8px auto 16px auto;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+button {
+    width: 40%;
+    font-size: 1rem;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.btn-1 {
+    margin-right: 10px;
+}
+
+.btn-2 {
+    margin-left: 10px;
+}
+
+.results {
+    max-height: 300px;
+    margin: 50px 0;
+    overflow-y: auto;
+    padding: 0 12px;
+}
+
+.results-text {
+    color: rgba(82, 77, 77, 0.829);
+    font-weight: bold;
+    font-size: var(--myFontSize);
+}
