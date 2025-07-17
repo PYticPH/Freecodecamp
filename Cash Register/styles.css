@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+h1 {
+  font-size: 2rem;
+}
+
+body {
+  background-color: rgb(59, 12, 30);
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 25px;
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cash-container {
+  background-color:rgb(82, 80, 80);
+  margin: 10px 0;
+  padding: 10px 50px;
+  border-radius: 10px;
+  border-left: 25px inset rgb(68, 64, 64);
+  border-right: 25px inset rgb(68, 64, 64);
+  border-bottom: 25px inset rgb(68, 64, 64);
+}
+
+#change-due {
+  background-color:rgb(82, 80, 80);
+  margin: 40px 0;
+  padding: 20px 50px;
+  border-radius: 10px;
+  box-shadow: 20px 10px rgb(68, 64, 64);
+}
+
+#change-due p, .cash-container p {
+  margin: 6px 4px;
+}
+
+.price {
+  font-weight: 600;
+  margin-top: 20px;
+  padding: 6px 4px;
+}
+
+.price span {
+  font-size: 1.8rem;
+}
+
+.cash-list li {
+  list-style: none;
+}
+
+input {
+  width: 300px;
+  padding: 10px 5px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+button {
+  margin-top: 20px;
+  padding: 2px 20px;
+  font-size: 1.5rem;
+  background-color: rgb(40, 40, 190);
+  color:beige;
+  border-radius: 5px 5px;
+}
+
+#status-red, #status-ins {
+  color: red;
+}
+
+#status {
+  background: #ffffff;
+  color: #585454;
+  font-weight: bold;
+  padding: 4px;
+}
+
+#status span {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+#status-green {
+  color: green;
+}
